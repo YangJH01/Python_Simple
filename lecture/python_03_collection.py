@@ -185,4 +185,4 @@ abc.clear()
 print(abc)
 
 a = {}
-print(type(a))
+print(type(a))      # 이런 식으로 타입 물어보는거 시험가능성이 있다.
