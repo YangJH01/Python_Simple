@@ -25,7 +25,7 @@ b = [22, 1, 4, 7, 98]
 num_min = b[0]
 
 for i in b:
-    if num_min > b[i] :
-        num_min = b[i]
+    if num_min > i :
+        num_min = i
 
 print(num_min)
