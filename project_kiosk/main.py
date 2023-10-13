@@ -51,8 +51,8 @@ elif choice == 2 :  #음료
     price_save.append(drink_price[choice])
 elif choice == 3 :  # 빵
     print("●● 빵(Bakery)")
-    for i, value in enumerate(bakery_name) :
-        print(f"●○   {i+1}.{bakery_name[value]}({bakery_price[value]}원)")
+    for i, value in enumerate(bakery_name.values()) :
+        print(f"●○   {i+1}.{value}({bakery_price[i+1]}원)")
     choice = user_choice(len(main_name), "main")
     menu_save.append(bakery_name[choice])
     price_save.append(bakery_price[choice])
