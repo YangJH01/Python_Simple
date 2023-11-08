@@ -25,4 +25,4 @@
 #    CREATE     -> INSERT
 #    READ       -> SELECT
 #    UPDATE     -> UPDATE
-#    DELETE     -> DELTE
+#    DELETE     -> DELETE
