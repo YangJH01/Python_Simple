@@ -34,8 +34,6 @@ for i, item in enumerate(news_category):
     print(f"= {i+1}.{item}")
 print("= MSG: 수집하고 싶은 뉴스 카테고리를 입력해주세요.")
 
-print(news_category.get(1))
-
 while True:
     news = input("= > 카테고리: ")
     if news in list(news_category.keys()):
