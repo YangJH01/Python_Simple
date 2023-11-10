@@ -2,6 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+from db.news_dao import add_news
 
 
 def get_news(url: str):  # 이런식으로 2칸 띄고 주석
@@ -20,3 +21,13 @@ def get_news(url: str):  # 이런식으로 2칸 띄고 주석
         content += p.get_text()
     print(f"본문: {content}")
 
+
+
+    # 수집한 데이터 DB에 저장
+    # MongoDB -> JSON = Dict Type
+    data = {
+        "title": title,
+        "content": content,
+        "date": reg_date
+    }
+    add_news(data)
