@@ -42,10 +42,27 @@ def get_last_review():
         # INSERT, DELETE, UPDATE -> 동작(Check)
         # SELECT -> DB로부터 데이터 받기(dict type)
         # - 단건 : fetchone()
-        # - 보수건 : fetchall()
+        # - 복수건 : fetchall()
         result = curs.fetchone()
         return result
     except Exception as e:
         print(e)
     finally:
         conn.close()
+
+
+def get_reviews():
+    conn = connection()
+
+    try:
+        curs = conn.cursor()
+        sql = """
+                SELECT * FROM tbl_review
+              """
+        curs.execute(sql)
+        return curs.fetchall()
+    except Exception as e:
+        print(e)
+    finally:
+        conn.close()
+
